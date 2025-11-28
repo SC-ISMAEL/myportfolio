@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Raynel's Portfolio | BSIT Student & Web Developer",
-  description: "Portfolio of Raynel, a BSIT 3rd year student specializing in web development with HTML, CSS, JavaScript, React, Next.js, and Express.js",
+  title: "Ismael | Minimal Web Engineer",
+  description:
+    "Ismael (SC-ISMAEL) builds calm, minimal web experiences with thoughtful gradients, accessible UX, and reliable engineering.",
 };
 
 export default function RootLayout({

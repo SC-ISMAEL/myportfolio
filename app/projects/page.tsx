@@ -135,7 +135,7 @@ export default function ProjectsPage() {
       : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted pt-16">
+    <div className="min-h-screen bg-gradient-to-b from-[#fff7ef] via-[#ffe6cc] to-[#ffcba3] pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -151,11 +151,12 @@ export default function ProjectsPage() {
           >
             <Cpu className="w-16 h-16 text-primary" />
           </motion.div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            FCFS CPU Scheduling Algorithm
+          <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-foreground">
+            FCFS scheduling · minimal visualizer
           </h1>
-          <p className="text-xl text-muted-foreground">
-            First Come First Serve CPU Scheduling Visualization
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            A calm workspace for demonstrating First Come First Serve logic with
+            breathable layouts, gentle gradients, and focused controls.
           </p>
         </motion.div>
 
@@ -164,7 +165,7 @@ export default function ProjectsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-card rounded-xl p-6 shadow-lg border border-border mb-8"
+          className="rounded-3xl border border-white/70 bg-white/80 p-6 shadow-sm backdrop-blur mb-8"
         >
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-2xl font-semibold">Processes</h2>
@@ -270,7 +271,7 @@ export default function ProjectsPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleReset}
-            className="flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow"
+            className="flex items-center gap-2 px-6 py-3 rounded-lg border border-foreground/20 font-semibold text-foreground shadow-sm hover:shadow"
           >
             <RotateCcw className="w-5 h-5" />
             Reset
@@ -283,7 +284,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-card rounded-xl p-6 shadow-lg border border-border mb-8"
+            className="rounded-3xl border border-white/70 bg-white/80 p-6 shadow-sm backdrop-blur mb-8"
           >
             <h2 className="text-2xl font-semibold mb-4">Gantt Chart</h2>
             <div className="overflow-x-auto">
@@ -301,11 +302,11 @@ export default function ProjectsPage() {
                       }`}
                     >
                       <motion.div
-                        animate={isActive ? { scale: 1.1 } : { scale: 1 }}
-                        className={`w-20 h-16 rounded-lg flex items-center justify-center font-semibold text-sm border-2 ${
+                        animate={isActive ? { scale: 1.05 } : { scale: 1 }}
+                        className={`w-20 h-16 rounded-2xl flex items-center justify-center font-semibold text-sm border ${
                           isActive
-                            ? "bg-primary text-primary-foreground border-primary shadow-lg"
-                            : "bg-muted text-foreground border-border"
+                            ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/30"
+                            : "bg-white/60 text-foreground border-white/60"
                         }`}
                       >
                         {item.process}
@@ -332,7 +333,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-card rounded-xl p-6 shadow-lg border border-border mb-8"
+          className="rounded-3xl border border-white/70 bg-white/80 p-6 shadow-sm backdrop-blur mb-8"
           >
             <h2 className="text-2xl font-semibold mb-4">Results</h2>
             <div className="overflow-x-auto">
@@ -370,14 +371,14 @@ export default function ProjectsPage() {
               </table>
             </div>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-primary/10 rounded-lg p-4">
-                <p className="text-sm text-muted-foreground mb-1">Average Waiting Time</p>
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
+                <p className="text-sm text-foreground/70 mb-1">Average Waiting Time</p>
                 <p className="text-2xl font-bold text-primary">
                   {avgWaitingTime.toFixed(2)}
                 </p>
               </div>
-              <div className="bg-primary/10 rounded-lg p-4">
-                <p className="text-sm text-muted-foreground mb-1">
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
+                <p className="text-sm text-foreground/70 mb-1">
                   Average Turnaround Time
                 </p>
                 <p className="text-2xl font-bold text-primary">

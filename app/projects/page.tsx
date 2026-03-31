@@ -135,7 +135,7 @@ export default function ProjectsPage() {
       : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fff7ef] via-[#ffe6cc] to-[#ffcba3] pt-24">
+    <div className="min-h-screen bg-background pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
